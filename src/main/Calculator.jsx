@@ -13,7 +13,7 @@ const initialState = {
 }
 
 export default class Calculator extends Component {
-    state = [...initialState]
+    state = {...initialState}
 
     constructor(props) {
         super(props)
@@ -32,7 +32,16 @@ export default class Calculator extends Component {
     }
 
     addDigit(n) {
-        console.log(n)
+        // Regra para evitar ter dois pontos na calculadora
+        if (n === '.' && this.state.displayValue.includes('.')) {
+            return
+        }
+
+        const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay
+
+        const currentValue = clearDisplay ? '' : this.state.displayValue
+        const displayValue = currentValue + n
+        this.setState({displayValue, clearDisplay: false})
     }
 
     render() {
