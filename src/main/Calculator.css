@@ -1,11 +1,11 @@
 .calculator {
-    height: 320px;
-    width: 235px;
+    height: 220px;
+    width: 175px;
     border-radius: 5px;
     overflow: hidden;
     
     display: grid;
     grid-template-columns: repeat(4, 25%);
     /* Terei 4 colunas, cada uma ocupando 25% do espaço total */
-    grid-template-rows: 48px 48px 48px 48px;
+    grid-template-rows: 1f  48px 48px 48px 48px 48px;
 }
