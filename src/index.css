@@ -18,3 +18,9 @@ body {
     /* Usando um gradiente como background */
     background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73)); 
 }
+
+#title {
+    font-size: 1.1em;
+    background-color: #0004;
+    border-radius: 5px;
+}
